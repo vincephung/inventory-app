@@ -1,0 +1,14 @@
+<div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/A4GDK27VMnz6LtFDy9yzk-1200-80.jpg"
+            alt="Laptop picture">
+        <div class="card-body">
+            <h5 class="card-title">{{laptop.name}}</h5>
+            <p class="card-text">{{laptop.description}}</p>
+            <p class="card-text">${{laptop.price}}</p>
+            <p class="card-text">{{laptop.stock}} currently in stock.</p>
+            <a href='{{laptop.url}}/update' class="btn btn-primary">Update</a>
+            <a href='{{laptop.url}}/delete' class="btn btn-primary">Delete</a>
+        </div>
+    </div>
+</div>

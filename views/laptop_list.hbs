@@ -1,0 +1,22 @@
+<div class="category-header">
+    <h2>Laptops Available</h2>
+    <a href="/catalog/laptop/create" class="btn btn-primary">Add item</a>
+</div>
+<div class="container">
+    <div class="row">
+        {{#each laptop_list}}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm h-100" style="width: 18rem;">
+                <img class="card-img-top h-100"
+                    src="https://cdn.mos.cms.futurecdn.net/A4GDK27VMnz6LtFDy9yzk-1200-80.jpg" alt="Phone image">
+                <div class="card-body h-100">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <a href="/catalog/laptop/{{this.id}}" class="btn btn-primary">View this laptop.</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</div>

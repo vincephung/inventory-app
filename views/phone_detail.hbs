@@ -1,0 +1,15 @@
+<div class="card-container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top"
+            src="https://cdn.pocket-lint.com/r/s/1200x630/assets/images/120309-phones-buyer-s-guide-best-smartphones-2020-the-top-mobile-phones-available-to-buy-today-image1-eagx1ykift.jpg"
+            alt="phone picture">
+        <div class="card-body">
+            <h5 class="card-title">{{phone.name}}</h5>
+            <p class="card-text">{{phone.description}}</p>
+            <p class="card-text">${{phone.price}}</p>
+            <p class="card-text">{{phone.stock}} currently in stock.</p>
+            <a href='{{phone.url}}/update' class="btn btn-primary">Update</a>
+            <a href='{{phone.url}}/delete' class="btn btn-primary">Delete</a>
+        </div>
+    </div>
+</div>

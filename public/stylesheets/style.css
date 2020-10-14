@@ -1,0 +1,36 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-header {
+  margin-left: 10px;
+  margin-right: 5%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-error {
+  color: red;
+}
+
+form {
+  background-color: whitesmoke;
+  width: 50%;
+  padding: 20px;
+}
+
+.delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,39 @@
+<div class="form-container">
+    <form method='POST' action=''>
+        <h2>{{title}}</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="Laptop Name" name="name" required='true'
+                value="{{laptop.name}}">
+        </div>
+        <div class="form-group">
+            <label for="description">Product Description:</label>
+            <textarea class="form-control" id="description" rows="3" name="description"
+                required='true'>{{laptop.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select class="form-control" id="category" placeholder='Select Category' name="category" required='true'>
+                <option value="{{category.[0]._id}}">{{category.[0].name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" name="price" required='true' value="{{laptop.price}}">
+        </div>
+        <div class="form-group">
+            <label for="stock">Number in stock:</label>
+            <input type="number" class="form-control" id="stock" name="stock" required='true' value="{{laptop.stock}}">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <div class="form-error">
+        {{#if errors}}
+        <ul>
+            {{#each errors}}
+            <li>Error: {{this.msg}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+</div>
