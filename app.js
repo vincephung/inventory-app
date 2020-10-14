@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//var usersRouter = require('./routes/users');
 var catalogRouter = require('./routes/catalog');
 var compression = require('compression');
 var helmet = require('helmet');
@@ -15,7 +15,7 @@ var app = express();
 //Set up mongoose connection
 var mongoose = require('mongoose');
 var dev_db_url =
-  'mongodb+srv://me:taco123@cluster0.6yhcp.mongodb.net/inventory-app?retryWrites=true&w=majority';
+  'mongodb+srv://me:taco123@cluster0.6yhcp.mongodb.net/inventory-app?retryWrites=true&w=majority?authSource=inventory-app&w=1';
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -38,7 +38,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);
 
 // catch 404 and forward to error handler
