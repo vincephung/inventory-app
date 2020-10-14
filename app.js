@@ -28,6 +28,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use('/catalog', express.static(__dirname + '/views/images'));
+app.use('/catalog/laptop', express.static(__dirname + '/views/images'));
+app.use('/catalog/phone', express.static(__dirname + '/views/images'));
+app.use('/catalog/tablet', express.static(__dirname + '/views/images'));
+
 app.use(compression()); //Compress all routes
 app.use(helmet());
 
